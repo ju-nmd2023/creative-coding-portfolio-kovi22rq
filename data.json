@@ -1,7 +1,19 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
+    "file": "experiments/noise-recreation.js",
+    "name": "Perlin Noise 01",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+
+  {
+    "file": "experiments/noise-variation-01.js",
+    "name": "Perlin Noise 02",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+
+  {
+    "file": "experiments/noise-variation-02.js",
+    "name": "Perlin Noise 03",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
 ]
