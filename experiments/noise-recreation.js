@@ -13,6 +13,12 @@ function draw() {
   noStroke();
   fill(140, 10, 80);
 
+  const gridWidth = numCols * size;
+  const gridHeight = numRows * size;
+
+  const offsetX = (width - gridWidth) / 2;
+  const offsetY = (height - gridHeight) / 2;
+
   noiseSeed(4);
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
