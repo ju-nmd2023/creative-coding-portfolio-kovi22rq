@@ -15,5 +15,23 @@
     "file": "experiments/noise-variation-02.js",
     "name": "Perlin Noise 03",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+
+  {
+    "file": "experiments/molnar-recreation.js",
+    "name": "Molnar 01",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+
+  {
+    "file": "experiments/molnar-variation-01.js",
+    "name": "Molnar 02",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+
+  {
+    "file": "experiments/molnar-variation-02.js",
+    "name": "Molnar 03",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
 ]
