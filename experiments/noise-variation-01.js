@@ -15,11 +15,14 @@ function draw() {
   background(0);
   noiseSeed(1);
 
+  const startX = width / 2 - (numCols * size) / 2;
+  const startY = height / 2 - (numRows * size) / 2;
+
   //The following code was made with inspiration from the noise tutorial shown during one of the lectures.
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       const value = noise(x / divider, y / divider, counter) * size;
-      square(size / 2 + x * size, size / 2 + y * size, value);
+      square(startX + x * size, startY + y * size, value);
 
       // The following code was written with the help from https://www.gorillasun.de/blog/an-introduction-to-perlin-noise-in-p5js-and-processing
       const r = noise(x * rez, y * rez, counter) * 180;
