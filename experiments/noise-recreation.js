@@ -13,11 +13,14 @@ function draw() {
   noStroke();
   fill(140, 10, 80);
 
+  const startX = width / 2 - (numCols * size) / 2;
+  const startY = height / 2 - (numRows * size) / 2;
+
   noiseSeed(4);
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       const value = noise(x / divider, y / divider) * size;
-      square(size / 2 + x * size, size / 2 + y * size, value);
+      square(startX + x * size, startY + y * size, value);
     }
   }
 

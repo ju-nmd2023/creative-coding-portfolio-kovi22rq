@@ -1,7 +1,4 @@
-function setup() {
-  createCanvas(innerWidth, innerHeight);
-  frameRate(10);
-}
+let colors;
 
 const amount = 2;
 const gap = 10;
@@ -13,23 +10,28 @@ const numCols = 30;
 
 const tileSize = numCols * size;
 
-const colors = [
-  color(40, 15, 120),
-  color(95, 50, 230),
-  color(130, 145, 230),
-  color(175, 190, 235),
-];
-
 const seeds = [1, 5, 6, 9];
 
 let counter = 0;
 
-//The following code is made with inspiration from the noise example shown during one of the lectures.
-function drawElement(xOffset, yOffset, color, seed) {
+function setup() {
+  createCanvas(innerWidth, innerHeight);
+  frameRate(10);
+
+  colors = [
+    color(40, 15, 120),
+    color(95, 50, 230),
+    color(130, 145, 230),
+    color(175, 190, 235),
+  ];
+}
+
+function drawElement(xOffset, yOffset, colorVal, seed) {
   noStroke();
-  fill(color);
+  fill(colorVal);
   noiseSeed(seed);
 
+  //The following code was made with inspiration from the noise tutorial shown during one of the lectures.
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       const value = noise(x / divider, y / divider, counter) * size;
@@ -49,6 +51,7 @@ function draw() {
   const startX = (width - totalWidth) / 2;
   const startY = (height - totalWidth) / 2;
 
+  //The following code was made with help from one of the live coding lectures.
   for (let row = 0; row < amount; row++) {
     for (let col = 0; col < amount; col++) {
       const x = startX + col * (tileSize + gap);
