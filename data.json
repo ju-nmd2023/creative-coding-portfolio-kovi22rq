@@ -37,7 +37,7 @@
 
   {
     "file": "experiments/flow-field.js",
-    "name": "Flow Field",
+    "name": "Flow Field 01",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
 ]

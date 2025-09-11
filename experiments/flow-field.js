@@ -1,5 +1,5 @@
 //The following code was written with help from Garrit's code tutorial on flow fields
-//This piece is inspired by Tyler Hobbs article about different flow fields
+//This piece is inspired by Tyler Hobbs article about different flow fields https://www.tylerxhobbs.com/words/flow-fields
 
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
@@ -50,7 +50,7 @@ class Agent {
 
   draw() {
     push();
-    stroke(48, 244, 255);
+    stroke(50, 245, 255);
     strokeWeight(0.5);
     line(
       this.lastPosition.x,
