@@ -70,7 +70,7 @@ class Agent {
 const fieldSize = 20;
 const maxCols = Math.ceil(window.innerWidth / fieldSize);
 const maxRows = Math.ceil(window.innerHeight / fieldSize);
-const divider = 80; // larger = smoother noise field
+const divider = 80;
 
 let field;
 let agents = [];
@@ -110,7 +110,6 @@ function draw() {
     let desiredDirection = flowDir;
 
     if (mouseIsPressed) {
-      // direction toward mouse
       let mouseDir = p5.Vector.sub(
         createVector(mouseX, mouseY),
         agent.position
@@ -118,10 +117,9 @@ function draw() {
       let distToMouse = mouseDir.mag();
       mouseDir.setMag(1);
 
-      // closer agents get pulled more strongly
+     
       let influence = constrain(200 / distToMouse, 0, 1);
 
-      // blend flow with mouse pull
       desiredDirection = p5.Vector.lerp(flowDir, mouseDir, influence);
     }
 

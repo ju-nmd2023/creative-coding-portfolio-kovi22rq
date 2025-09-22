@@ -1,4 +1,5 @@
 //The following code was written with help from Garrit's code tutorial on flow fields
+//This piece is inspired by Tyler Hobbs article about different flow fields
 
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
@@ -55,7 +56,7 @@ class Agent {
     if (this.stepCount % 3 === 0) {
       push();
       noStroke();
-      fill(194, 202, 209);
+      fill(245, 66, 227);
       ellipse(this.position.x, this.position.y, 2, 2);
       pop();
     }
@@ -111,7 +112,7 @@ function draw() {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
 
-    // Guard against out-of-bounds
+    // The following three lines were written with some help from ChatGPT
     if (x >= 0 && x < maxCols && y >= 0 && y < maxRows) {
       const desiredDirection = field[x][y];
       agent.follow(desiredDirection);
